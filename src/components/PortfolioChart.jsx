@@ -32,7 +32,7 @@ export default function PortfolioChart() {
         height: 400,
       }}
     >
-      <Pie data={data} />;
+      <Pie data={data} />
     </div>
   );
 }
