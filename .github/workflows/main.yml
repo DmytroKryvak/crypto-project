@@ -24,10 +24,15 @@ jobs:
         working-directory: ./
         run: npm install
 
+      - name: Configure Git identity
+        run: |
+          git config --global user.email "dimakryvak7@gmail.com"
+          git config --global user.name "DmytroKryvak"
+
       - name: Prepare and deploy
         working-directory: ./
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEMO_KEY: ${{secrets.DEMO_KEY }}
         run: |
-          npm run deploy --base-href=/crypto-project/ --name="DmytroKryvak" --email="dimakryvak7@gmail.com"
+          npm run deploy
