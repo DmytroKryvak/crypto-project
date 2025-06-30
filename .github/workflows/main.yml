@@ -29,6 +29,10 @@ jobs:
           git config --global user.email "dimakryvak7@gmail.com"
           git config --global user.name "DmytroKryvak"
 
+      - name: Set GitHub remote to use token
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
       - name: Prepare and deploy
         working-directory: ./
         env:
