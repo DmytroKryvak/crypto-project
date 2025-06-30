@@ -30,4 +30,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEMO_KEY: ${{secrets.DEMO_KEY }}
         run: |
-          npm run ng -- deploy --base-href=/crypto-project/ --name="DmytroKryvak" --email="dimakryvak7@gmail.com"
+          npm run deploy --base-href=/crypto-project/ --name="DmytroKryvak" --email="dimakryvak7@gmail.com"
